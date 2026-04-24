@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recetario Argentino - Sabores Clásicos</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  
+  <style>
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Open Sans', Arial, sans-serif;
+      background: linear-gradient(180deg, #74ACDF 0%, #ffffff 100%);
+      color: #003870;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      font-size: clamp(14px, 2vw, 16px);
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 6% 20px 4% 20px;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    header h1 {
+      font-family: 'Lora', serif;
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      margin-bottom: 5px;
+      color: #003870;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.7);
+    }
+
+    header p {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      color: #0055a4;
+      max-width: 650px;
+      margin: 0 auto;
+      font-weight: 300;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 800px; 
+      margin: 0 auto 40px auto;
+      padding: clamp(25px, 6%, 50px); 
+      background: rgba(255, 255, 255, 0.85); 
+      backdrop-filter: blur(5px);
+      border-radius: 24px;
+      box-shadow: 0 10px 30px rgba(0, 56, 112, 0.08); 
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid rgba(116, 172, 223, 0.4); 
+      box-sizing: border-box;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .instrucciones {
+      margin-bottom: 40px; 
+      padding: clamp(20px, 5%, 35px); 
+      background: #fdfcfa; 
+      border-left: 6px solid #F6B40E;
+      border-radius: 14px;
+      text-align: left; 
+      width: 100%;
+      max-width: 600px;
+      box-sizing: border-box;
+    }
+
+    .instrucciones h3 {
+      font-family: 'Lora', serif;
+      font-size: 1.4rem;
+      color: #0055a4;
+      margin-top: 0;
+      margin-bottom: 25px;
+    }
+
+    .instrucciones ol {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    .instrucciones li {
+      margin-bottom: 18px;
+      transition: transform 0.2s ease;
+      cursor: default;
+    }
+    
+    .instrucciones li:hover {
+      transform: translateX(5px);
+    }
+
+    .instrucciones li:last-child {
+      margin-bottom: 0;
+    }
+
+    .content-wrapper {
+      text-align: center;
+      width: 100%;
+    }
+    
+    .content-wrapper h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.8rem;
+    }
+
+    .download-btn {
+      display: inline-block;
+      background-color: #74ACDF;
+      color: white;
+      padding: 16px 36px;
+      border-radius: 50px; 
+      text-decoration: none;
+      font-weight: 700;
+      font-size: clamp(1rem, 3vw, 1.25rem);
+      margin: 25px 0; 
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      border: 2px solid #0055a4;
+      max-width: 100%;
+      box-sizing: border-box;
+      box-shadow: 0 4px 6px rgba(0, 56, 112, 0.2);
+    }
+
+    .download-btn:hover {
+      background-color: #0055a4;
+      transform: translateY(-4px);
+      box-shadow: 0 10px 20px rgba(0, 56, 112, 0.3); 
+    }
+
+    .footer-final {
+      text-align: center;
+      padding: 30px;
+      font-size: clamp(0.75rem, 2vw, 0.85rem);
+      background: #74ACDF;
+      color: white;
+      border-top: 4px solid #F6B40E;
+      margin-top: auto;
+      font-weight: 300;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        width: 95%;
+        padding: 20px;
+      }
+      .instrucciones {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Recetario Argentino</h1>
+    <p>Descargá tu recetario con las mejores comidas típicas de nuestra tierra.</p>
+  </header>
+
+  <main class="container">
+    <div class="instrucciones">
+      <h3>¿Cómo descargar el recetario?</h3>
+      <ol>
+        <li>Presioná el botón de <strong>Descargar Recetario</strong>.</li>
+        <li>Esperá a que se complete la descarga.</li>
+        <li>Abrí el archivo desde tu carpeta de descargas.</li>
+        <li>¡Listo! Ya podés ver las recetas clásicas de Argentina.</li>
+      </ol>
+    </div>
+
+    <div class="content-wrapper">
+      <h2 style="color: #0055a4;">Tu archivo está listo</h2>
+      <p>Hacé clic en el siguiente botón para bajar el archivo:</p>
+
+      <a class="download-btn" href="https://www.mediafire.com/file/zo2ar7xzcd9np2a/Recetario_Argentino.apk/file" download>
+        Descargar Recetario
+      </a>
+    </div>
+  </main>
+
+  <footer class="footer-final">
+    © 2026 Recetario Argentino — Hecho por: <strong>Iván Villa y Rocío Saavedra</strong>.<br>
+    Representando a la <strong>Escuela Técnica N°3 Víctor Mercante</strong>.
+  </footer>
+
+</body>
+</html>
